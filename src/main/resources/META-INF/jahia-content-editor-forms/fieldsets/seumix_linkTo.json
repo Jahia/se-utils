@@ -1,0 +1,49 @@
+{
+  "name": "seumix:linkTo",
+  "description": "",
+  "dynamic": false,
+  "fields": [
+    {
+      "name": "seu:linkType",
+      "selectorType": "Choicelist",
+      "valueConstraints": [
+        {
+          "value": {
+            "type": "String",
+            "value": "internalLink"
+          },
+          "displayValue": "An internal content",
+          "propertyList": [
+            {
+              "name": "addMixin",
+              "value": "seumix:internalLink"
+            }
+          ]
+        },
+        {
+          "value": {
+            "type": "String",
+            "value": "externalLink"
+          },
+          "displayValue": "An external content",
+          "propertyList": [
+            {
+              "name": "addMixin",
+              "value": "seumix:externalLink"
+            }
+          ]
+        },
+        {
+          "value": {
+            "type": "String",
+            "value": "self"
+          },
+          "displayValue": "This content",
+          "propertyList": []
+        }
+      ]
+    }
+  ]
+}
+	
+ 

@@ -1,0 +1,15 @@
+{
+  "name": "seumix:internalLink",
+  "fields": [
+    {
+      "name": "seu:internalLink",
+      "selectorType": "DamSelector",
+      "selectorOptionsMap": {
+        "type":"editoriallink",
+        "pickerConfig": {
+          "selectableTypesTable": ["jmix:droppableContent","jnt:page", "jnt:file"]
+        }
+      }
+    }
+  ]
+}

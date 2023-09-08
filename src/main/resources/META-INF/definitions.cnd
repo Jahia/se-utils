@@ -1,0 +1,26 @@
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+<seumix = 'http://modules.se.jahia.org/se-utils/mix/1.0'>
+<seunt = 'http://modules.se.jahia.org/se-utils/nt/1.0'>
+<seu = 'http://modules.se.jahia.org/se-utils/1.0'>
+
+//*** CONTENT LINKER //
+[seumix:internalLink] > jmix:dynamicFieldset mixin
+ extends = seumix:linkTo
+ - seu:internalLink (weakreference, picker[type='editoriallink']) // < 'jmix:droppableContent', 'jnt:page', 'jnt:file'
+
+[seumix:externalLink] > jmix:dynamicFieldset mixin
+ extends = seumix:linkTo
+ - seu:externalLink (string) = 'https://'
+
+[seumix:linkToUTM] mixin
+ extends = seumix:linkTo
+ - seu:utmSource (string)
+ - seu:utmMedium (string)
+ - seu:utmCampaign (string)
+ - seu:utmTerm (string)
+ - seu:utmContent (string)
+
+ [seumix:linkTo] mixin
+  - seu:linkType (string) indexed=no
+  - seu:linkTarget (string, choicelist[resourceBundle]) = _blank autocreated indexed=no < '_blank', '_self', '_parent', '_top'
