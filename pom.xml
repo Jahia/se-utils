@@ -23,6 +23,10 @@
         <url>https://github.com/Jahia/se-utils</url>
     </scm>
 
+    <properties>
+        <jahia-depends>default,dam-selector</jahia-depends>
+    </properties>
+
     <repositories>
         <repository>
             <id>jahia-public</id>
@@ -44,11 +48,6 @@
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
                 <extensions>true</extensions>
-                <configuration>
-                    <instructions>
-                        <Jahia-Depends>default</Jahia-Depends>
-                    </instructions>
-                </configuration>
             </plugin>
         </plugins>
     </build>
