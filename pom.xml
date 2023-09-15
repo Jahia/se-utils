@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0                       http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>jahia-modules</artifactId>
@@ -13,7 +10,7 @@
     <groupId>org.jahia.se.modules</groupId>
     <artifactId>se-utils</artifactId>
     <name>Utils component for SE to build custom demo</name>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>bundle</packaging>
     <description>This is the custom module (Utils component for SE to build custom demo) for running on a Jahia server.</description>
 
@@ -21,7 +18,8 @@
         <connection>scm:git:git@github.com:Jahia/se-utils.git</connection>
         <developerConnection>scm:git:git@github.com:Jahia/se-utils.git</developerConnection>
         <url>https://github.com/Jahia/se-utils</url>
-    </scm>
+      <tag>se-utils-1.0.0</tag>
+  </scm>
 
     <properties>
         <jahia-depends>default,dam-selector</jahia-depends>
