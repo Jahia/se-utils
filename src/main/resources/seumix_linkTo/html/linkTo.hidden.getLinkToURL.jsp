@@ -5,21 +5,21 @@
 
 <c:set var="linkType" value="${currentNode.properties['seu:linkType'].string}" />
 
-<c:set var="mediaWidth" value="${not empty currentResource.moduleParams.mediaWidth ? currentResource.moduleParams.mediaWidth : '1028'}" />
-<c:set var="mediaHeight" value="${currentResource.moduleParams.mediaHeight}" />
-<c:set var="mediaScale" value="${not empty currentResource.moduleParams.mediaScale ? currentResource.moduleParams.mediaScale : 1}" />
-<c:set var="mediaQuality" value="${not empty currentResource.moduleParams.mediaQuality ? currentResource.moduleParams.mediaQuality : 72}" />
+<c:set var="width" value="${not empty currentResource.moduleParams.mediaWidth ? currentResource.moduleParams.mediaWidth : '1028'}"/>
+<c:set var="height" value="${currentResource.moduleParams.mediaHeight}"/>
+<c:set var="scale" value="${currentResource.moduleParams.mediaScale}"/>
+<c:set var="quality" value="${currentResource.moduleParams.mediaQuality}"/>
 
 <c:choose>
     <c:when test="${linkType eq 'internalLink'}">
-        <c:set var="mediaNode" value="${currentNode.properties['seu:internalLink'].node}"/>
+        <c:set var="linkedNode" value="${currentNode.properties['seu:internalLink'].node}"/>
         <c:if test="${! empty mediaNode}">
-            <template:module node="${mediaNode}" view="hidden.getURL" var="linkUrl" editable="false" templateType="txt">
-                <template:param name="width" value="${mediaWidth}"/>
-                <template:param name="height" value="${mediaHeight}"/>
-                <template:param name="scale" value="${mediaScale}"/>
-                <template:param name="quality" value="${mediaQuality}"/>
-            </template:module>
+            <c:catch var ="getUrlException">
+                <c:set var="linkUrl" value="${linkedNode.getUrl(['width:'.concat(width),'height:'.concat(height),'scale:'.concat(scale),'quality:'.concat(quality)])}"/>
+            </c:catch>
+            <c:if test = "${getUrlException != null}">
+                <c:set var="linkUrl" value="${linkedNode.getUrl()}"/>
+            </c:if>
         </c:if>
     </c:when>
     <c:when test="${linkType eq 'externalLink'}">

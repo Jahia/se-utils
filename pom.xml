@@ -9,10 +9,10 @@
     </parent>
     <groupId>org.jahia.se.modules</groupId>
     <artifactId>se-utils</artifactId>
-    <name>Utils component for SE to build custom demo</name>
+    <name>SE Utils</name>
     <version>1.0.2-SNAPSHOT</version>
     <packaging>bundle</packaging>
-    <description>This is the custom module (Utils component for SE to build custom demo) for running on a Jahia server.</description>
+    <description>Utils component for SE to build custom demo.</description>
 
     <scm>
         <connection>scm:git:git@github.com:Jahia/se-utils.git</connection>
@@ -22,7 +22,7 @@
   </scm>
 
     <properties>
-        <jahia-depends>default,dam-selector</jahia-depends>
+        <jahia-depends>default</jahia-depends>
     </properties>
 
     <repositories>
