@@ -3,7 +3,7 @@
   "fields": [
     {
       "name": "seu:internalLink",
-      "selectorType": "DamSelector",
+      "selectorType": "Picker",
       "selectorOptionsMap": {
         "type":"editoriallink",
         "pickerConfig": {
