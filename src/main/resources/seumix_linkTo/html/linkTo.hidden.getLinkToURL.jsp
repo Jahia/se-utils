@@ -13,7 +13,7 @@
 <c:choose>
     <c:when test="${linkType eq 'internalLink'}">
         <c:set var="linkedNode" value="${currentNode.properties['seu:internalLink'].node}"/>
-        <c:if test="${! empty mediaNode}">
+        <c:if test="${! empty linkedNode}">
             <c:catch var ="getUrlException">
                 <c:set var="linkUrl" value="${linkedNode.getUrl(['width:'.concat(width),'height:'.concat(height),'scale:'.concat(scale),'quality:'.concat(quality)])}"/>
             </c:catch>
