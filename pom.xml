@@ -23,6 +23,7 @@
 
     <properties>
         <jahia-depends>default</jahia-depends>
+        <jahia.plugin.version>6.9</jahia.plugin.version>
     </properties>
 
     <repositories>
