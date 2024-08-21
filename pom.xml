@@ -10,7 +10,7 @@
     <groupId>org.jahia.se.modules</groupId>
     <artifactId>se-utils</artifactId>
     <name>SE Utils</name>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.3</version>
     <packaging>bundle</packaging>
     <description>Utils component for SE to build custom demo.</description>
 
@@ -18,7 +18,7 @@
         <connection>scm:git:git@github.com:Jahia/se-utils.git</connection>
         <developerConnection>scm:git:git@github.com:Jahia/se-utils.git</developerConnection>
         <url>https://github.com/Jahia/se-utils</url>
-      <tag>HEAD</tag>
+      <tag>se-utils-1.0.3</tag>
   </scm>
 
     <properties>
